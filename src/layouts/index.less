@@ -1,0 +1,41 @@
+@import '~antd/lib/style/themes/default.less';
+
+.tags {
+  height: 23px;
+  overflow: hidden;
+}
+
+.paragraph,
+.space {
+  font-family: 'Fira Code', 'Courier New', Courier, monospace;
+  transition: all 1s ease;
+
+  .author {
+    margin-right: 8px;
+    font-size: 14px;
+
+    a {
+      color: @text-color;
+
+      &:hover {
+        color: @text-color-secondary;
+      }
+
+      .icon {
+        margin-right: 4px;
+      }
+    }
+  }
+
+  a {
+    color: @link-color;
+
+    &:hover {
+      color: @link-hover-color;
+    }
+
+    .icon {
+      margin-right: 4px;
+    }
+  }
+}

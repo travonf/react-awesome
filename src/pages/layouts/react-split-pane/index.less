@@ -1,0 +1,81 @@
+.reactSplitPaneWrapper {
+  position: relative;
+  background: #141414;
+  height: 600px;
+
+  :global {
+    .Resizer {
+      background: #000;
+      opacity: 0.2;
+      z-index: 1;
+
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+
+      -moz-background-clip: padding;
+      -webkit-background-clip: padding;
+      background-clip: padding-box;
+
+      &:hover {
+        -webkit-transition: all 2s ease;
+        transition: all 2s ease;
+      }
+
+      &.horizontal {
+        width: 100%;
+        height: 11px;
+        margin: -5px 0;
+        cursor: row-resize;
+        border-top: 5px solid rgba(255, 255, 255, 0);
+        border-bottom: 5px solid rgba(255, 255, 255, 0);
+
+        &:hover {
+          border-top: 5px solid rgba(255, 255, 255, 0.5);
+          border-bottom: 5px solid rgba(255, 255, 255, 0.5);
+        }
+      }
+
+      &.vertical {
+        width: 11px;
+        height: 100%;
+        margin: 0 -5px;
+        cursor: col-resize;
+        border-left: 5px solid rgba(255, 255, 255, 0);
+        border-right: 5px solid rgba(255, 255, 255, 0);
+
+        &:hover {
+          border-left: 5px solid rgba(255, 255, 255, 0.5);
+          border-right: 5px solid rgba(255, 255, 255, 0.5);
+        }
+      }
+
+      &.disabled {
+        cursor: not-allowed;
+
+        &:hover {
+          border-color: transparent;
+        }
+      }
+    }
+  }
+
+  .menu {
+    list-style: none;
+    padding: 16px 0;
+    text-align: center;
+  }
+}
+
+.content {
+  height: 100%;
+  padding: 12px;
+
+  transition: all 3s ease;
+
+  // border-radius: 4px;
+
+  &:hover {
+    box-shadow: inset 0 0 10px 1px rgba(255, 255, 255, 0.2);
+  }
+}
