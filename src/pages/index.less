@@ -1,0 +1,49 @@
+.wrapper {
+  // margin: -24px;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+
+  .navbar {
+    position: absolute;
+    top: 16px;
+    left: 25%;
+    // background-color: whitesmoke;
+    color: inherit;
+    width: 50%;
+    height: 64px;
+    line-height: 64px;
+    font-size: 0.7em;
+    text-align: right;
+
+    a {
+      margin: 0 16px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .navbar {
+      display: none;
+    }
+  }
+
+  .logo {
+    animation: logo-spin infinite 20s linear;
+    height: 50vmin;
+    pointer-events: none;
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
