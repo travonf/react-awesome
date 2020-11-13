@@ -14,7 +14,7 @@ import {
 import { withHistory } from 'slate-history';
 import { css } from 'emotion';
 
-import { Button, Icon, Toolbar } from './components';
+import { Button, Icon, Toolbar } from '../components';
 
 const ImagesExample = () => {
   const [value, setValue] = useState<Node[]>(initialValue);

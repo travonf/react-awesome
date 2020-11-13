@@ -1,24 +1,24 @@
 import React from 'react';
 import { Tabs } from 'antd';
-import Study from './components/study';
-import CheckLists from './components/check-lists';
-import EditableVoids from './components/editable-voids';
-import Embeds from './components/embeds';
-import ForcedLayout from './components/forced-layout';
-import HoveringToolbar from './components/hovering-toolbar';
-import HugeDocument from './components/huge-document';
-import Images from './components/images';
-import Links from './components/links';
-import MarkdownPreview from './components/markdown-preview';
-import MarkdownShortcuts from './components/markdown-shortcuts';
-import Mentions from './components/mentions';
-import PasteHtml from './components/paste-html';
-import PlainText from './components/plaintext';
-import ReadOnly from './components/read-only';
-import RichText from './components/richtext';
-import SearchHighlighting from './components/search-highlighting';
-import CodeHighlighting from './components/code-highlighting';
-import Tables from './components/tables';
+import Study from './examples/study';
+import CheckLists from './examples/check-lists';
+import EditableVoids from './examples/editable-voids';
+import Embeds from './examples/embeds';
+import ForcedLayout from './examples/forced-layout';
+import HoveringToolbar from './examples/hovering-toolbar';
+import HugeDocument from './examples/huge-document';
+import Images from './examples/images';
+import Links from './examples/links';
+import MarkdownPreview from './examples/markdown-preview';
+import MarkdownShortcuts from './examples/markdown-shortcuts';
+import Mentions from './examples/mentions';
+import PasteHtml from './examples/paste-html';
+import PlainText from './examples/plaintext';
+import ReadOnly from './examples/read-only';
+import RichText from './examples/richtext';
+import SearchHighlighting from './examples/search-highlighting';
+import CodeHighlighting from './examples/code-highlighting';
+import Tables from './examples/tables';
 import styles from './index.less';
 
 // prettier-ignore
@@ -47,7 +47,7 @@ const EXAMPLES = [
 const Demo = () => {
   return (
     <div className={styles.wrapper}>
-      <Tabs type="card" tabPosition="left" defaultActiveKey="forced-layout">
+      <Tabs type="card" tabPosition="left" defaultActiveKey="editable-voids">
         {EXAMPLES.map(([tabCN, tabEn, key, Component, desc]) => (
           <Tabs.TabPane key={key as string} tab={tabCN}>
             <div className={styles.box}>

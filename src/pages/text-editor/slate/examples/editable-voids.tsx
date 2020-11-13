@@ -1,11 +1,11 @@
 import React, { useState, useMemo } from 'react';
 import { Transforms, createEditor, Node } from 'slate';
-import { Slate, Editable, useEditor, withReact } from 'slate-react';
+import { Slate, Editable, useEditor as useSlateStatic, withReact } from 'slate-react';
 import { withHistory } from 'slate-history';
 import { css } from 'emotion';
 
 import RichTextEditor from './richtext';
-import { Button, Icon, Toolbar } from './components';
+import { Button, Icon, Toolbar } from '../components';
 
 const EditableVoidsExample = () => {
   const [value, setValue] = useState<Node[]>(initialValue);
@@ -43,7 +43,7 @@ const Element = props => {
 
   switch (element.type) {
     case 'editable-void':
-      return <EditableVoidExample {...props} />;
+      return <EditableVoidElement {...props} />;
     default:
       return <p {...attributes}>{children}</p>;
   }
@@ -53,10 +53,11 @@ const unsetWidthStyle = css`
   width: unset;
 `;
 
-const EditableVoidExample = ({ attributes, children, element }: any) => {
+const EditableVoidElement = ({ attributes, children, element }) => {
   const [inputValue, setInputValue] = useState('');
 
   return (
+    // Need contentEditable=false or Firefox has issues with certain input types.
     <div {...attributes} contentEditable={false}>
       <div
         className={css`
@@ -79,7 +80,7 @@ const EditableVoidExample = ({ attributes, children, element }: any) => {
         <input className={unsetWidthStyle} type="radio" name="handedness" value="left" /> Left
         <br />
         <input className={unsetWidthStyle} type="radio" name="handedness" value="right" /> Right
-        <h4>Tell us abount yourself;</h4>
+        <h4>Tell us about yourself:</h4>
         <div
           className={css`
             padding: 20px;
@@ -95,7 +96,7 @@ const EditableVoidExample = ({ attributes, children, element }: any) => {
 };
 
 const InsertEditableVoidButton = () => {
-  const editor = useEditor();
+  const editor = useSlateStatic();
   return (
     <Button
       onMouseDown={event => {

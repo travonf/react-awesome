@@ -1,11 +1,10 @@
 import React, { useState, useMemo } from 'react';
+import isUrl from 'is-url';
 import { Node, Transforms, Editor, Range, createEditor } from 'slate';
 import { Slate, Editable, withReact, useSlate } from 'slate-react';
 import { withHistory } from 'slate-history';
 
-import { Button, Icon, Toolbar } from './components';
-
-const isUrl = text => true;
+import { Button, Icon, Toolbar } from '../components';
 
 const LinkExample = () => {
   const [value, setValue] = useState<Node[]>(initialValue);

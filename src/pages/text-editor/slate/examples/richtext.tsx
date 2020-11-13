@@ -2,7 +2,7 @@ import React, { useState, useMemo, useCallback } from 'react';
 import { Editor, Transforms, createEditor, Node } from 'slate';
 import { Editable, withReact, useSlate, Slate } from 'slate-react';
 import { withHistory } from 'slate-history';
-import { Button, Icon, Toolbar } from './components';
+import { Button, Icon, Toolbar } from '../components';
 
 const HOTKEYS = {
   'mod+b': 'bold',

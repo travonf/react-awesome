@@ -35,7 +35,7 @@ export default defineConfig({
   routes: [
     {
       path: '/',
-      component: '@/layouts/index',
+      component: '@/pages/index',
       flatMenu: true,
       routes: [
         {
