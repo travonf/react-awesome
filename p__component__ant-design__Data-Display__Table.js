@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([[22],{M5BB:function(e,t,a){"use strict";a.r(t);a("IzEo");var n=a("bx4M"),l=a("cDcd"),c=a.n(l),i=a("hxP2"),o=a.n(i);t["default"]=()=>c.a.createElement(n["default"],null,c.a.createElement("h1",{className:o.a.title},"Page Table"))},hxP2:function(e,t,a){e.exports={title:"title___3nazK"}}}]);

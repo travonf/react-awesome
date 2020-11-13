@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([[14],{"7E+E":function(e,t,a){e.exports={title:"title___Je6BA"}},aoQf:function(e,t,a){"use strict";a.r(t);var n=a("cDcd"),c=a.n(n),o=a("7E+E"),i=a.n(o);t["default"]=()=>c.a.createElement("div",null,c.a.createElement("h1",{className:i.a.title},"Page pro-form"))}}]);

@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([[18],{yp9p:function(e,n,p){"use strict";p.r(n);var t=p("cDcd"),a=p.n(t),c=p("ALhN"),s=p.n(c);n["default"]=()=>a.a.createElement(s.a,{type:"list"})}}]);

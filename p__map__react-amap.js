@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([[36],{vj71:function(e,a,n){"use strict";n.r(a);var t=n("cDcd"),c=n.n(t),d=n("7DBZ");function i(){return c.a.createElement("div",{style:{width:"100%",height:"63vh"}},c.a.createElement(d["Map"],{amapkey:"cd5d68d2a357791af44a1c2553c88b18",version:"1.4.0"}))}a["default"]=i}}]);

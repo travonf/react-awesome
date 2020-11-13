@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([[19],{sgSC:function(e,n,t){"use strict";t.r(n);var a=t("cDcd"),c=t.n(a),s=t("ALhN"),p=t.n(s);n["default"]=()=>c.a.createElement(p.a,{type:"result"})}}]);
