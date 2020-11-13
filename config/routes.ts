@@ -1,6 +1,13 @@
 import { IBestAFSRoute } from '@umijs/plugin-layout';
 import omit from 'omit.js';
 
+import antDesign from 'antd/package.json';
+import antDesignProLayout from '@ant-design/pro-layout/package.json';
+import antDesignProSkeleton from '@ant-design/pro-skeleton/package.json';
+import antDesignProCard from '@ant-design/pro-card/package.json';
+import antDesignProForm from '@ant-design/pro-form/package.json';
+import antDesignProTable from '@ant-design/pro-table/package.json';
+
 import reactBlocks from 'react-blocks/package.json';
 import reactFlexboxGrid from 'react-flexbox-grid/package.json';
 import rebassGrid from '@rebass/grid/package.json';
@@ -72,6 +79,8 @@ import reactCopyToClipboard from 'react-copy-to-clipboard/package.json';
 
 import reactContexify from 'react-contexify/package.json';
 import reactContextmenu from 'react-contextmenu/package.json';
+
+import immer from 'immer/package.json';
 
 const antMotion = {
   name: 'ant-motion',
@@ -146,6 +155,183 @@ const antMotion = {
 };
 
 const routes: IBestAFSRoute[] = [
+  // 组件库
+  {
+    name: 'component',
+    path: 'component',
+    icon: 'Star',
+    routes: [
+      // react-component
+      {
+        name: 'react-component',
+        path: 'react-component',
+      },
+      // antd
+      {
+        ...antDesign,
+        name: 'ant-design',
+        path: 'ant-design',
+        // menu: { name: 'Ant Design', icon: 'AntDesign' },
+        // access: 'canReadLibrary',
+        routes: [
+          {
+            name: 'layout',
+            path: 'layout',
+            routes: [
+              {
+                name: 'layout',
+                path: 'layout',
+                component: '@/pages/component/ant-design/Layout/Layout',
+              },
+              {
+                name: 'grid',
+                path: 'grid',
+                component: '@/pages/component/ant-design/Layout/Grid',
+              },
+            ],
+          },
+          {
+            name: 'navigation',
+            path: 'navigation',
+            routes: [
+              {
+                name: 'menu',
+                path: 'menu',
+              },
+              {
+                name: 'steps',
+                path: 'steps',
+              },
+            ],
+          },
+          {
+            name: 'data-entry',
+            path: 'data-entry',
+            // menu: { name: '数据录入' },
+            routes: [
+              {
+                name: 'form',
+                path: 'form',
+                component: '@/pages/component/ant-design/Data-Entry/Form',
+                // menu: { name: '表单' },
+              },
+              {
+                name: 'select',
+                path: 'select',
+                component: '@/pages/component/ant-design/Data-Entry/Select',
+                // menu: { name: '选择器' },
+              },
+            ],
+          },
+          {
+            name: 'data-display',
+            path: 'data-display',
+            // menu: { name: '数据展示' },
+            routes: [
+              {
+                name: 'table',
+                path: 'table',
+                component: '@/pages/component/ant-design/Data-Display/Table',
+                // menu: { name: '表格' },
+              },
+              {
+                name: 'descriptions',
+                path: 'descriptions',
+                component: '@/pages/component/ant-design/Data-Display/Descriptions' // prettier-ignore
+                // menu: { name: '描述列表' },
+              },
+            ],
+          },
+          {
+            name: 'feedback',
+            path: 'feedback',
+            routes: [
+              {
+                name: 'alert',
+                path: 'alert',
+              },
+            ],
+          },
+          {
+            name: 'other',
+            path: 'other',
+            routes: [
+              {
+                name: 'anchor',
+                path: 'anchor',
+              },
+            ],
+          },
+        ],
+      },
+      // 专业组件
+      {
+        name: 'ant-design-pro',
+        path: 'ant-design-pro',
+        // menu: { name: 'Pro Components', icon: 'AntDesign' },
+        routes: [
+          {
+            ...antDesignProLayout,
+            path: 'layout',
+            component: '@/pages/component/ant-design-pro/layout',
+            // menu: { name: '专业布局', icon: 'Layout' },
+            layout: {
+              hideNav: true,
+              hideFooter: true,
+            },
+          },
+          {
+            ...antDesignProSkeleton,
+            path: 'skeleton',
+            component: '@/pages/component/ant-design-pro/skeleton',
+            // menu: { name: '专业骨架屏', icon: 'Border' },
+            routes: [
+              {
+                path: 'list',
+                component: '@/pages/component/ant-design-pro/skeleton/list',
+                // menu: { name: '列表页', icon: 'UnorderedList' },
+              },
+              {
+                path: 'descriptions',
+                component: '@/pages/component/ant-design-pro/skeleton/descriptions',
+                // menu: { name: '详情页', icon: 'Border' },
+              },
+              {
+                path: 'result',
+                component: '@/pages/component/ant-design-pro/skeleton/result',
+                // menu: { name: '结果页', icon: 'Border' },
+              },
+            ],
+          },
+          {
+            ...antDesignProCard,
+            path: 'card',
+            component: '@/pages/component/ant-design-pro/card',
+            // menu: { name: '专业卡片', icon: 'Border' },
+            routes: [
+              {
+                path: 'list',
+                component: '@/pages/component/ant-design-pro/card/split',
+                // menu: { name: '卡片切分', icon: 'Border' },
+              },
+            ],
+          },
+          {
+            ...antDesignProForm,
+            path: 'form',
+            component: '@/pages/component/ant-design-pro/form',
+            // menu: { name: '专业表单', icon: 'Form' },
+          },
+          {
+            ...antDesignProTable,
+            path: 'table',
+            component: '@/pages/component/ant-design-pro/table',
+            // menu: { name: '专业表格', icon: 'Table' },
+          },
+        ],
+      },
+    ],
+  },
   // 布局库
   {
     name: 'layouts',
@@ -600,6 +786,20 @@ const routes: IBestAFSRoute[] = [
         // name: 'react-intl',
         path: 'react-intl',
         component: '@/pages/zoo/react-intl',
+      },
+    ],
+  },
+  // 工具库
+  {
+    name: 'tool',
+    path: 'tool',
+    icon: 'Tool',
+    component: '@/pages/tool',
+    routes: [
+      {
+        ...immer,
+        path: 'immer',
+        component: '@/pages/tool/immer',
       },
     ],
   },

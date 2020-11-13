@@ -4,6 +4,40 @@ export default {
   ENV_INDICATOR_DEV: 'dev',
   ENV_INDICATOR_PRO: 'pro',
 
+  /**
+   * 组件库
+   */
+  'menu.component': '组件库',
+  'menu.component.react-component': 'react-component',
+
+  'menu.component.ant-design': 'Ant Design',
+  'menu.component.ant-design.layout': '布局',
+  'menu.component.ant-design.layout.layout': '布局',
+  'menu.component.ant-design.layout.grid': '栅格',
+  'menu.component.ant-design.navigation': '导航',
+  'menu.component.ant-design.navigation.menu': '菜单',
+  'menu.component.ant-design.navigation.steps': '步骤条',
+  'menu.component.ant-design.data-entry': '数据录入',
+  'menu.component.ant-design.data-entry.form': '表单',
+  'menu.component.ant-design.data-entry.select': '选择器',
+  'menu.component.ant-design.data-display': '数据展示',
+  'menu.component.ant-design.data-display.table': '表格',
+  'menu.component.ant-design.data-display.descriptions': '描述',
+  'menu.component.ant-design.feedback': '反馈',
+  'menu.component.ant-design.feedback.alert': '警告提示',
+  'menu.component.ant-design.other': '其他',
+  'menu.component.ant-design.other.anchor': '锚点',
+
+  'menu.component.ant-design-pro': '专业组件',
+  'menu.component.ant-design-pro.@ant-design/pro-layout': '布局',
+  'menu.component.ant-design-pro.@ant-design/pro-skeleton': '骨架',
+  'menu.component.ant-design-pro.@ant-design/pro-card': '卡片',
+  'menu.component.ant-design-pro.@ant-design/pro-form': '表单',
+  'menu.component.ant-design-pro.@ant-design/pro-table': '表格',
+
+  /**
+   * 精选库
+   */
   'menu.layouts': '布局',
   'menu.layouts.react-blocks': 'react-blocks',
   'menu.layouts.react-flexbox-grid': 'react-flexbox-grid',
@@ -83,4 +117,10 @@ export default {
   'menu.zoo.react-helmet': 'react-helmet',
   'menu.zoo.react-helmet-async': 'react-helmet-async',
   'menu.zoo.react-intl': '国际化',
+
+  /**
+   * 工具库
+   */
+  'menu.tool': '工具库',
+  'menu.tool.immer': 'immer',
 };

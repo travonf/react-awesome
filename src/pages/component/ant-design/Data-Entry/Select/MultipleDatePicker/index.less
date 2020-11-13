@@ -1,0 +1,50 @@
+@import '~antd/lib/style/themes/default.less';
+
+.ant-picker-cell-inner {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  min-width: 24px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 2px;
+  -webkit-transition: background 0.3s, border 0.3s;
+  transition: background 0.3s, border 0.3s;
+}
+
+.ant-picker-calendar-date {
+  display: block;
+  width: auto;
+  height: auto;
+  margin: 0 @padding-xs / 2;
+  padding: @padding-xs / 2 @padding-xs 0;
+  border: 0;
+  border-top: 2px solid @border-color-split;
+  border-radius: 0;
+  transition: background 0.3s;
+}
+
+.ant-picker-cell-selected {
+  color: #fff;
+  background: #1890ff;
+
+  &:hover {
+    background: @calendar-item-active-bg;
+    color: @primary-color;
+  }
+}
+
+.ant-picker-calendar-date-value {
+  line-height: 24px;
+  transition: color 0.3s;
+}
+
+.ant-picker-calendar-date-content {
+  position: static;
+  width: auto;
+  height: 86px;
+  overflow-y: auto;
+  color: @text-color;
+  line-height: @line-height-base;
+  text-align: left;
+}
