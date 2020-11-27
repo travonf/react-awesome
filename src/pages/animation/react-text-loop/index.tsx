@@ -2,7 +2,7 @@ import React from 'react';
 import TextLoop from 'react-text-loop';
 import styles from './index.less';
 
-const ReactTextLoop = () => {
+const Demo = () => {
   return (
     <div className={styles.wrapper}>
       <TextLoop
@@ -71,4 +71,6 @@ const ReactTextLoop = () => {
   );
 };
 
-export default ReactTextLoop;
+Demo.menu = { name: 'React Text Loop' };
+
+export default Demo;

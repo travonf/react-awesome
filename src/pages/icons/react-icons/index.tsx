@@ -21,7 +21,7 @@ const IconCard: React.FC<any> = ({ icon, name }) => {
   );
 };
 
-function ReactIcons() {
+function Demo() {
   const [iconsId, setIconsId] = React.useState<string>('ai');
   const [modules, setModules] = React.useState<{}>({});
 
@@ -55,4 +55,6 @@ function ReactIcons() {
   // );
 }
 
-export default ReactIcons;
+Demo.menu = { name: 'React Icons' };
+
+export default Demo;

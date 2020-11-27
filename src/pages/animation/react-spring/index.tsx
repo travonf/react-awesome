@@ -5,4 +5,6 @@ const Demo = () => {
   return <div>{/* <ReactSpring /> */}</div>;
 };
 
+Demo.menu = { name: 'React Spring' };
+
 export default Demo;

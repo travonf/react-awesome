@@ -1,5 +1,5 @@
 import React from 'react';
-import Chart from '@/pages/biz-charts/Chart';
+import Chart from './Chart';
 
 const random = () => Math.round(Math.random() * 100);
 
@@ -18,8 +18,10 @@ const dataSource = [
   { x: '12月', y: random(), z: random() },
 ];
 
-function Index(props) {
+function Demo(props) {
   return <Chart data={dataSource} Axis={['x', 'y']} />;
 }
 
-export default Index;
+Demo.menu = { name: 'BizCharts' };
+
+export default Demo;

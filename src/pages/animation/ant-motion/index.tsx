@@ -8,7 +8,7 @@ import DemoGroup05 from './components/scroll-anim';
 import DemoGroup06 from './components/banner-anim';
 import styles from './index.less';
 
-function App() {
+function Demo() {
   return (
     <Tabs defaultActiveKey="进出场动画">
       <Tabs.TabPane key="单元素动画" tab="单元素动画">
@@ -38,4 +38,6 @@ function App() {
   );
 }
 
-export default App;
+Demo.menu = { name: 'Ant motion' };
+
+export default Demo;

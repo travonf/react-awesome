@@ -9,5 +9,7 @@ module.exports = {
 
   rules: {
     // your rules
+    'no-param-reassign': 0,
+    '@typescript-eslint/no-use-before-define': 0,
   },
 };

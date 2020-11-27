@@ -123,4 +123,5 @@ export default {
    */
   'menu.tool': '工具库',
   'menu.tool.immer': 'immer',
+  'menu.tool.rxjs': 'rxjs',
 };

@@ -81,6 +81,7 @@ import reactContexify from 'react-contexify/package.json';
 import reactContextmenu from 'react-contextmenu/package.json';
 
 import immer from 'immer/package.json';
+import rxjs from 'rxjs/package.json';
 
 const antMotion = {
   name: 'ant-motion',
@@ -800,6 +801,11 @@ const routes: IBestAFSRoute[] = [
         ...immer,
         path: 'immer',
         component: '@/pages/tool/immer',
+      },
+      {
+        ...rxjs,
+        path: 'rxjs',
+        component: '@/pages/tool/rxjs',
       },
     ],
   },

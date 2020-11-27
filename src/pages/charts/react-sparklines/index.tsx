@@ -28,4 +28,6 @@ const Demo = () => {
   );
 };
 
+Demo.menu = { name: 'React SparkLines' };
+
 export default Demo;

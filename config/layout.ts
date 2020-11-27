@@ -2,7 +2,7 @@ import { BasicLayoutProps } from '@ant-design/pro-layout';
 
 const layout: BasicLayoutProps = {
   title: 'Components',
-  logo: '/assets/react.ico',
+  logo: '/react-components/assets/react.ico',
   // pure: false,
   // loading: true,
   // menuHeaderRender,
@@ -20,7 +20,7 @@ const layout: BasicLayoutProps = {
   // breakpoint: 'lg',
   menu: { locale: true },
   // iconfontUrl: '//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js',
-  // locale: 'zh-CN',
+  locale: 'zh-CN',
   siderWidth: 208,
   // siderWidth: 240,
   // onCollapse,

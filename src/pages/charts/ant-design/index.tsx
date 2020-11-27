@@ -1,7 +1,7 @@
 import React from 'react';
 import { Line } from '@ant-design/charts';
 
-const Charts = () => {
+const Demo = () => {
   const config = {
     data: [
       { year: '1991', value: 3 },
@@ -25,4 +25,6 @@ const Charts = () => {
   return <Line {...config} height={600} />;
 };
 
-export default Charts;
+Demo.menu = { name: 'Ant Charts' };
+
+export default Demo;

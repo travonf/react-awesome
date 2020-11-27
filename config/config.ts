@@ -8,12 +8,16 @@ import proxy from './proxy';
 
 // prettier-ignore
 const scripts = [
-  {name: 'react',     globalName: 'React',     version: '16.13.1', dev: 'umd/react.development.js',     pro: 'umd/react.development.min.js'},
-  {name: 'react-dom', globalName: 'ReactDOM',  version: '16.13.1', dev: 'umd/react-dom.development.js', pro: 'umd/react-dom.production.min.js'},
-  {name: 'moment',    globalName: 'moment',    version: '2.27.0',  dev: 'moment.js',                    pro: 'moment.min.js'},
-  {name: 'lodash',    globalName: '_',         version: '4.17.19', dev: 'lodash.js',                    pro: 'lodash.min.js'},
-  {name: 'ramda',     globalName: 'R',         version: '0.27.1',  dev: 'dist/ramda.js',                pro: 'dist/ramda.min.js'},
+  {name: 'react',          globalName: 'React',     version: '16.13.1', dev: 'umd/react.development.js',     pro: 'umd/react.development.min.js'},
+  {name: 'react-dom',      globalName: 'ReactDOM',  version: '16.13.1', dev: 'umd/react-dom.development.js', pro: 'umd/react-dom.production.min.js'},
+  {name: 'moment',         globalName: 'moment',    version: '2.27.0',  dev: 'moment.js',                    pro: 'moment.min.js'},
+  {name: 'lodash',         globalName: '_',         version: '4.17.19', dev: 'lodash.js',                    pro: 'lodash.min.js'},
+  {name: 'ramda',          globalName: 'R',         version: '0.27.1',  dev: 'dist/ramda.js',                pro: 'dist/ramda.min.js'},
+  {name: 'bizcharts',      globalName: 'BizCharts', version: '4.0.15',  dev: 'umd/BizCharts.js',             pro: 'umd/BizCharts.min.js'},
+  {name: '@antv/data-set', globalName: 'DataSet',   version: '0.11.7',  dev: 'build/data-set.js',            pro: 'build/data-set.min.js'},
 ];
+
+const externals = (acc: any, cur: any) => ({ ...acc, [cur.name]: cur.globalName });
 
 const cdn = ({ name, version, dev, pro }: any) => {
   switch (process.env.NODE_ENV) {
@@ -29,7 +33,7 @@ const cdn = ({ name, version, dev, pro }: any) => {
 export default defineConfig({
   title: 'React Components',
 
-  favicon: '/assets/react.ico',
+  favicon: '/react-components/assets/react.ico',
 
   /**
    * https://umijs.org/zh-CN/config#analyze
@@ -97,16 +101,8 @@ export default defineConfig({
   /**
    * https://umijs.org/zh-CN/config#externals
    * https://umijs.org/zh-CN/guide/boost-compile-speed#配置-externals
-   * scripts.map(({name, globalName}) => ({[name]: globalName})).reduce((acc, cur) => ({...acc, ...cur}),{})
    */
-  // prettier-ignore
-  externals: {
-    'react':     'React',
-    'react-dom': 'ReactDOM',
-    'moment':    'moment',
-    'lodash':    '_',
-    'ramda':     'R',
-  },
+  externals: scripts.reduce(externals, {}),
 
   /**
    * 引入被 external 库的 scripts
@@ -117,9 +113,16 @@ export default defineConfig({
    * https://umijs.org/zh-CN/config#styles
    * 配置额外 CSS
    */
-  /*
-   styles,
-   */
+  styles:
+    process.env.NODE_ENV === 'development'
+      ? [
+          'https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&subset=latin-ext',
+          'https://fonts.googleapis.com/icon?family=Material+Icons',
+        ]
+      : [
+          'https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&subset=latin-ext',
+          'https://fonts.googleapis.com/icon?family=Material+Icons',
+        ],
 
   /**
    * https://umijs.org/zh-CN/plugins/plugin-locale
@@ -149,6 +152,12 @@ export default defineConfig({
       ],
     },
   ],
+
+  /**
+   * https://umijs.org/zh-CN/config#history
+   * 配置 history 类型和配置项
+   */
+  history: { type: 'browser' },
 
   /**
    * https://umijs.org/zh-CN/config#theme
