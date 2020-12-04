@@ -43,6 +43,7 @@
     "braft-editor": "^2.3.9",
     "classnames": "^2.2.6",
     "codemirror": "^5.58.1",
+    "copy-to-clipboard": "^3.3.1",
     "emoji-mart": "^3.0.0",
     "emotion": "^10.0.27",
     "enquire-js": "^0.2.1",
